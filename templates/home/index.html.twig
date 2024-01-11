@@ -1,19 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CorrFormationController!{% endblock %}
+{% block title %}Hello CorrFormationController!
+{% endblock %}
 
 {% block body %}
-{{dump(formations)}}
 
-{% for formation in formations %}
+	{{dump(formations)}}
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+	<section class="d-flex flex-wrap gap-2">
+
+		{% for formation in formations %}
+
+			<div class="card" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">{{formation.titre}}e</h5>
+					<p class="card-text">{{formation.resume}}</p>
+					<a href="#" class="btn btn-primary">Details</a>
+				</div>
+			</div>
+
+		{% endfor %}
+
+	</section>
 
 {% endblock %}
