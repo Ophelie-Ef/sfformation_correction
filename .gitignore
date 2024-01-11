@@ -1,5 +1,7 @@
 
 ###> symfony/framework-bundle ###
+/.env
+/.env.test
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -18,8 +20,3 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-
-###> symfony/asset-mapper ###
-/public/assets/
-/assets/vendor
-###< symfony/asset-mapper ###
