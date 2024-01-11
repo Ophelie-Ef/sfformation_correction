@@ -36,7 +36,7 @@ Bon travail.
 - Créer une entitée formation avec les champs :
     - titre string 255
     - description text
-    - duree int
+    - duree integer
     - niveau string 20
     - lieu string 15
 - Créer un controller Home avec requête
