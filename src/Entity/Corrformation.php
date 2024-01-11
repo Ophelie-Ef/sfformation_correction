@@ -18,16 +18,20 @@ class Corrformation
     private ?string $titre = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    private ?string $resume = null;
+
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $duree = null;
+    private ?int $duree = null;    
 
     #[ORM\Column(length: 20)]
     private ?string $niveau = null;
 
     #[ORM\Column(length: 15)]
     private ?string $lieu = null;
+
 
     public function getId(): ?int
     {
@@ -42,6 +46,18 @@ class Corrformation
     public function setTitre(string $titre): static
     {
         $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getResume(): ?string
+    {
+        return $this->resume;
+    }
+
+    public function setResume(string $resume): static
+    {
+        $this->resume = $resume;
 
         return $this;
     }

@@ -35,6 +35,7 @@ Bon travail.
 - Créer votre base de données
 - Créer une entitée formation avec les champs :
     - titre string 255
+    - resume text
     - description text
     - duree integer
     - niveau string 20
