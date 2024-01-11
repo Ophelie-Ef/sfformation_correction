@@ -27,3 +27,18 @@ Réaliser ce site web avec une installation compléte de **Symfony**.
 Utiliser le framework css **bosstrap** pour effectu afficher les formations sous formes de **cards**.
 
 Bon travail.
+
+---
+
+- Installation d'un Symfony compmlet
+- Connecter Symfony à votre base de données
+- Créer votre base de données
+- Créer une entitée formation avec les champs :
+    - titre string 255
+    - description text
+    - duree int
+    - niveau string 20
+    - lieu string 15
+- Créer un controller Home avec requête
+- Ajouter Boostrap
+- Créer le template de la homepage
