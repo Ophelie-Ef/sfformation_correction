@@ -12,14 +12,17 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create();
-        $formation = new Corrformation(); // Corrformation : nom de l'entité 
+        
 
-        $formation->setTitre('Une Formation TrucMuche');
-        $formation->setDescription('Une decription de la formation TrucMuche');
-        $formation->setDuree(3);
-        $formation->setNiveau('Expert');
-        $formation->setLieu('presentiel');
-        $manager->persist($formation);
+        for ($i = 0; $i < 30; $i++) :
+            $formation = new Corrformation(); // Corrformation : nom de l'entité 
+            $formation->setTitre($faker->sentence());
+            $formation->setDescription($faker->paragraph());
+            $formation->setDuree($faker->numberBetween(0, 365));
+            $formation->setNiveau($faker->randomElement(['debutant', 'intermediaire', 'expert']));
+            $formation->setLieu($faker->randomElement(['presentiel', 'distanciel']));
+            $manager->persist($formation);
+        endfor;
 
         $manager->flush();
     }
