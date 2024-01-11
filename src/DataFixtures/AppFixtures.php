@@ -16,7 +16,7 @@ class AppFixtures extends Fixture
 
         for ($i = 0; $i < 30; $i++) :
             $formation = new Corrformation(); // Corrformation : nom de l'entité 
-            $formation->setTitre($faker->sentence());
+            $formation->setTitre($faker->words(3, true));
             $formation->setResume($faker->sentence());
             $formation->setDescription($faker->paragraph());
             $formation->setDuree($faker->numberBetween(0, 365));
