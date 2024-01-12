@@ -14,24 +14,34 @@
 					<a class="nav-link active" aria-current="page" href="{{path('homepage')}}">Home</a>
 				</li>
 
-				{% if app.user %}
+				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-					<li class="nav-item">
-						<a class="btn btn-primary" aria-current="page" href="{{path('app_logout')}}">Déconnexion</a>
-					</li>
-
-				{% else %}
-
-					<li class="nav-item">
-						<a class="btn btn-primary" aria-current="page" href="{{path('app_login')}}">Connexion</a>
+					<li class='nav-item'>
+						<a class="nav-link active" aria-current="page" href="{{path('admin')}}">Admin</a>
 					</li>
 
 				{% endif %}
 
-				<li>
-					<a class="btn btn-primary" aria-current="page" href="{{path('app_inscription')}}">Inscription</a>
-				</li>
 			</ul>
+
+			<div>
+				{# {% if app.user %} #}
+				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+					<a class="btn btn-primary" aria-current="page" href="{{path('app_logout')}}">Déconnexion</a>
+
+
+				{% else %}
+
+					<a class="btn btn-primary" aria-current="page" href="{{path('app_login')}}">Connexion</a>
+
+
+				{% endif %}
+
+				<a class="btn btn-primary" aria-current="page" href="{{path('app_inscription')}}">Inscription</a>
+
+			</div>
+
 		</div>
 	</div>
 </nav>
