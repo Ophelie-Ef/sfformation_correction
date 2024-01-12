@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Corrformation;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -51,8 +52,9 @@ class DashboardController extends AbstractDashboardController
 
         return [
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
-            MenuItem::section('Formation'),
+            MenuItem::section('CRUDs'),
             MenuItem::linkToCrud('Formation', 'fas fa-list', Corrformation::class),
+            MenuItem::linkToCrud('User', 'fa fa-list', User::class),
             MenuItem::section('Quitter'),
             MenuItem::linkToRoute('Retour au site', 'fa-solid fa-arrow-rotate-left', 'homepage'),
         ]; // Ceci est une écriture alternative à celle commentée lignes 49 et 50.
