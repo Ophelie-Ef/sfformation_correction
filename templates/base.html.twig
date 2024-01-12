@@ -14,8 +14,11 @@
 		{% block javascripts %}{% endblock %}
 	</head>
 	<body>
+		<header>
+			{% include "partials/_nav.html.twig" %}
+		</header>
 		<main class='container'>
-        {% block body %}{% endblock %}
+		{% block body %}{% endblock %}
 		</main>
-	</body>
+		</body>
 	</html>

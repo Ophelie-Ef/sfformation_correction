@@ -1,5 +1,10 @@
 <?php
 
+//MEMO :
+
+// email : jane.doe@faker.net
+// mdp : helloworld
+
 namespace App\Controller;
 
 use App\Entity\User;
